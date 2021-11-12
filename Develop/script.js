@@ -20,36 +20,43 @@ var taskContainer = document.querySelector(".container")
 WHEN I view the time blocks for that day
 THEN each time block is color-coded to indicate whether it is in the past, present, or future 
 */
- var currentHour = moment().hour(Number._d);
- console.log(currentHour);
+var currentHour = moment().hour(Number._d);
+console.log(currentHour);
 
 
 /*WHEN I click into a time block
 THEN I can enter an event*/
-var userTaskInput = $("textarea").val();
-$(".description").on("change",
-console.log (userTaskInput))
+var taskObj = document.getElementsByClassName("description");
 
-//     this.textContent = ""
-// $(this.textContent).on("data", function(){
-//     var userTaskInput = "data";
-//     console.log (userTaskInput)
-//     var text = $(this)
-//     .text()
-//     .trim();
-//     console.log(text);
-//     var textInput = $(this).replaceWith(this.textContent);
-// console.log(textInput)
-//   });
+function saveYourTasks () {
 
-/*WHEN I click the save button for that time block
-THEN the text for that event is saved in local storage*/
-$(".saveBtn").on("click", function () {
-    console.log("save btn clicked.")
-});
+for (var i = 0; i < taskObj.length; i++) {
+ taskObj[i].addEventListener('change', function (event) {
+        console.log(event.target.value);
+        // JSON.stringify("value", (event.target.value))
+    });
+    /*WHEN I click the save button for that time block
+    THEN the text for that event is saved in local storage*/
+    $(".saveBtn").on("click", function () {
+        localStorage.setItem("value", "event.target.value")
+        console.log (localStorage)
+    });
+     };
 
-/*WHEN I refresh the page
-THEN the saved events persist*/
+};
 
-displayDate();
-getUserInput();
+    //     var task = $(".description").val("");
+    //         userTaskInput[i].val = task
+
+    //         // var time =
+    // // console.log ("hi"))
+    // }
+
+
+
+    /*WHEN I refresh the page
+    THEN the saved events persist*/
+
+    displayDate();
+    saveYourTasks();
+    localStorage.getItem("task-item")
