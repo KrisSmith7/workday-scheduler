@@ -19,27 +19,18 @@ var taskContainer = document.querySelector(".container")
 /*
 WHEN I view the time blocks for that day
 THEN each time block is color-coded to indicate whether it is in the past, present, or future 
-var currentHour = (new Date()).getHours();
-$('.colorcode')
-  .each(function(){
-    var val = parseInt($(this).prop('id'));
-    if(val > currentHour && val < currentHour + 6){
-      $(this).css('background-color','Blue');
-    }else if(val < currentHour && val > currentHour-6){
-      $(this).css('background-color','Red');
-    }else if(val === currentHour){
-      $(this).css('background-color','Green');
-    }else{
-      $(this).css('background-color','White');
-    }
-  });
-  */
+*/
+ var currentHour = moment().hour(Number._d);
+ console.log(currentHour);
 
 
 /*WHEN I click into a time block
-THEN I can enter an event
+THEN I can enter an event*/
+$("textarea").on("click", function() {
+    console.log("clicked");
+  });
 
-WHEN I click the save button for that time block
+/*WHEN I click the save button for that time block
 THEN the text for that event is saved in local storage
 
 
