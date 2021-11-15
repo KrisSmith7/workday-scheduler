@@ -32,6 +32,8 @@ $(".saveBtn").click(function (event){
 });
 // console.log (localStorage);
 
+
+//WHEN I refresh the page, THEN the saved events persist -- corresponds to appropriate timeblocks
 $("#num08 .description").val(localStorage.getItem("08"));
 $("#num09 .description").val(localStorage.getItem("09"));
 $("#num10 .description").val(localStorage.getItem("10"));
@@ -44,10 +46,11 @@ $("#num16 .description").val(localStorage.getItem("16"));
 $("#num17 .description").val(localStorage.getItem("17"));
 
 
-//clear local storage
+//clears local storage
 $("#clearBtn").click(function (event){
     event.preventDefault;
     localStorage.clear();})
 
+//displays date at the top of the page
 displayDate();
 });
