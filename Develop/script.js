@@ -44,5 +44,10 @@ $("#num16 .description").val(localStorage.getItem("16"));
 $("#num17 .description").val(localStorage.getItem("17"));
 
 
+//clear local storage
+$("#clearBtn").click(function (event){
+    event.preventDefault;
+    localStorage.clear();})
+
 displayDate();
 });
