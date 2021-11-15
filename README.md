@@ -29,6 +29,6 @@ The following is a screenshot of the application as well as a link to the deploy
 
 https://krissmith7.github.io/workday-scheduler/
 
-![Screenshot of the workday-scheduler challenge.](./develop/workday-scheduler_screenshot.png)
+![Screenshot of the workday-scheduler challenge.](./Develop/screenshot.png)
 
 
