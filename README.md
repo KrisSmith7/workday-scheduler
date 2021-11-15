@@ -27,7 +27,7 @@ THEN the saved events persist
 
 The following is a screenshot of the application as well as a link to the deployed application:
 
-https://krissmith7.github.io/workday-scheduler
+https://krissmith7.github.io/workday-scheduler/
 
 ![Screenshot of the workday-scheduler challenge.](./develop/workday-scheduler_screenshot.png)
 
