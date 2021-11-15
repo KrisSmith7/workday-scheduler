@@ -30,7 +30,18 @@ $(".saveBtn").click(function (event){
     var taskTime = $(this).parent().attr("id").split("m")[1]; //selects parent div and checks "time"
     localStorage.setItem(taskTime, task);
 });
-console.log (localStorage);
+// console.log (localStorage);
+
+$("#num08 .description").val(localStorage.getItem("08"));
+$("#num09 .description").val(localStorage.getItem("09"));
+$("#num10 .description").val(localStorage.getItem("10"));
+$("#num11 .description").val(localStorage.getItem("11"));
+$("#num12 .description").val(localStorage.getItem("12"));
+$("#num13 .description").val(localStorage.getItem("13"));
+$("#num14 .description").val(localStorage.getItem("14"));
+$("#num15 .description").val(localStorage.getItem("15"));
+$("#num16 .description").val(localStorage.getItem("16"));
+$("#num17 .description").val(localStorage.getItem("17"));
 
 
 displayDate();
