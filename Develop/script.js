@@ -24,7 +24,13 @@ $(".time-block").each(function() {
 });
 
 
-
+$(".saveBtn").click(function (event){
+    event.preventDefault;
+    var task = $(this).siblings(".description").val() //selects value of sibling textarea
+    var taskTime = $(this).parent().attr("id").split("m")[1]; //selects parent div and checks "time"
+    localStorage.setItem(taskTime, task);
+});
+console.log (localStorage);
 
 
 displayDate();
